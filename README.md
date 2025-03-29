@@ -1,12 +1,74 @@
-# React + Vite
+# UserHive - User Management System 🔐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern user management application built with React that integrates with the Reqres API. Implements authentication, paginated user listing, and CRUD operations with responsive design.
 
-Currently, two official plugins are available:
+**Live Demo**: [https://userhive.vercel.app/](https://userhive.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔒 JWT-based authentication system
+- 📄 Paginated user listing 
+- ✏️ Edit user details with modal form
+- 🗑️ Delete users with confirmation dialog
+- 📱 Fully responsive design (mobile-first)
+- 🚨 Error handling with toast notifications
+- 🔄 Auto-redirect on unauthorized access
+- 🛣️ React Router navigation
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js ≥18.x
+- npm ≥9.x
+
+### Installation
+```bash
+# Clone repository
+git clone https://github.com/<your-username>/userhive.git
+
+# Navigate to project directory
+cd userhive
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+## 🌐 Live Demo
+
+Check out the live version hosted on Netlify:  
+[https://userhive.vercel.app/](https://userhive.vercel.app/)  
+
+Test credentials:  
+📧 Email: `eve.holt@reqres.in`  
+🔑 Password: `cityslicka`
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18 + Vite
+- **Routing**: React Router 6
+- **UI Library**: shadcn/ui + Tailwind CSS
+- **HTTP Client**: Fetch API
+- **Icons**: Lucide React
+- **Hosting**: Vercel
+
+
+## 🖥️ Running the App
+
+```bash
+# Development mode (http://localhost:5173)
+npm run dev
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+**Note**: This project uses a mock API - changes won't persist on the server but are handled optimistically in the UI.
+
