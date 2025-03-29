@@ -1,15 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router';
-import Login from './Login';
-import UsersList from './UsersList';
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { Toaster } from "react-hot-toast";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Login from "./Login";
+import UsersList from "./UsersList";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/users" element={<UsersList />} />
-      </Routes>
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/users" element={<UsersList />} />
+          </Routes>
+        </Router>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 }
 
